@@ -1184,6 +1184,16 @@ public class HueMulator implements HueErrorStringSet {
 	        notFirstChange = true;
         }
 
+        if(body.contains("\"colormode\""))
+        {
+        	if(notFirstChange)
+        		responseString = responseString + ",";
+        	responseString = responseString + "{\"success\":{\"/lights/" + lightId + "/state/colormode\":" + state.getColormode() + "}}";
+            if(deviceState != null)
+            	deviceState.setColormode(state.getColormode());
+	        notFirstChange = true;
+        }
+
         responseString = responseString + "]";
         
         return responseString;
