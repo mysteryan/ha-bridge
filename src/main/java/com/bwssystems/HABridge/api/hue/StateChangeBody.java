@@ -21,6 +21,7 @@ public class StateChangeBody {
     private int sat_inc;
     private List<Double> xy_inc;
     private int ct_inc;
+    private String colormode;
 
     public boolean isOn() {
         return on;
@@ -132,5 +133,13 @@ public class StateChangeBody {
 
 	public void setCt_inc(int ct_inc) {
 		this.ct_inc = ct_inc;
+	}
+
+	public String getColormode() {
+		return colormode;
+	}
+
+	public void setColormode(String colormode) {
+		this.colormode = colormode;
 	}
 }
